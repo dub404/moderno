@@ -7,9 +7,8 @@ var gulp = require('gulp'),
     cssmin = require ('gulp-cssmin');
 		
 gulp.task('sass', function(){
-  return gulp.src('app/scss/style.scss')
+  return gulp.src('app/scss/**/*.scss')
     .pipe(sass({outputStyle:'compressed'}))
-    .pipe(gulp.dest('app/cnpm i ss'))
     .pipe(rename({suffix : '.min'}))
     .pipe(gulp.dest('app/css'))
 	.pipe(browserSync.reload({stream: true}));
@@ -56,7 +55,7 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('watch', function(){
-		gulp.watch('app/scss/style.scss', gulp.parallel('sass'));
+		gulp.watch('app/scss/**/*.scss', gulp.parallel('sass'));
 		gulp.watch('app/*.html', gulp.parallel('html'));
 		gulp.watch('app/js/*.js', gulp.parallel('js'));
 });
