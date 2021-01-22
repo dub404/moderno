@@ -383,3 +383,33 @@
   display: inline-block;
 }
 //end author
+//start tutorial
+.tutorial{
+  padding: 65px 0 120px;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title{
+    @include f700;
+  }
+  &__item{
+    max-width: 370px;
+    width: 100%;
+    &-images{
+      min-height: 270px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+    }
+    &-title{
+      font-size: 24px;
+      color: $bg;
+      @include f700;
+      text-align: center;
+      padding: 35px 10px;
+      background-color: #f8f8f8;
+    }
+  }
+}
+//end tutorial
